@@ -60,8 +60,6 @@ button span {
 }
 
 .container {
-    position: sticky;
-    top: 0px;
     width: fit-content;
 }
 
