@@ -1,0 +1,13 @@
+:root {
+  --main-color: #6e07f3;
+}
+
+@font-face {
+  font-family: "europanuova";
+  src: url("../fonts/EuropaNuovaBold.ttf");
+}
+
+@font-face {
+  font-family: "europa";
+  src: url("../fonts/EuropaRegular.ttf");
+}
