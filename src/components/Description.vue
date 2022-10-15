@@ -1,11 +1,10 @@
 <template>
     <div class="description-container">
-        <h2 class="description-title">Hi, I’m Luis. Nice to meet you.</h2>
+        <h2 class="description-title">About me</h2>
         <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestias modi velit, suscipit maiores
-            eligendi perspiciatis. Id quos quas nisi laborum quasi? Eius ullam, cupiditate aut dicta esse quidem porro?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repudiandae quisquam est sunt provident
-            debitis fugiat iure beatae maiores totam reprehenderit dolorum.
+            Hi! my name is Luis and I enjoy creating things that live on internet. My interest in web development
+            started back in 2021 when I decided to try editing a Conky theme for my Linux desktop- it resulted in
+            learning more about CSS and getting the hang of it, at least until you try to center a div.
         </p>
     </div>
 </template>
@@ -29,6 +28,7 @@
     width: 65%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 100px;
     font-family: 'europa', sans-serif;
     font-size: 1.3rem;
     text-align: center;
