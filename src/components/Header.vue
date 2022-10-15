@@ -3,7 +3,7 @@ import Menu from './HamburgerMenu.vue';
 </script>
 
 <template>
-    <div class="header-container">
+    <div>
         <div class="top">
             <Menu />
             <img src="../assets/img/programming.svg" alt="logo" class="logo" />
@@ -22,8 +22,6 @@ import Menu from './HamburgerMenu.vue';
 </template>
 
 <style scoped>
-.header-container {}
-
 .top {
     position: relative;
     z-index: 10;
