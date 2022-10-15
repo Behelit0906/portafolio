@@ -59,8 +59,8 @@ const iconPath = `src/assets/icons/${props.icon}`;
 .icon-background {
     display: flex;
     justify-content: center;
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
