@@ -25,6 +25,8 @@ import Menu from './HamburgerMenu.vue';
 .header-container {}
 
 .top {
+    position: relative;
+    z-index: 10;
     width: 97.9%;
     padding-top: 15px;
     position: fixed;
