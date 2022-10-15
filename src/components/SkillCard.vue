@@ -74,7 +74,7 @@ const iconPath = `src/assets/icons/${props.icon}`;
 
 .skill-name {
     margin: 10px 0 0 0;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 700;
     color: var(--title-color);
     font-style: 'europanuova', sans-serif;
