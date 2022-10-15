@@ -309,8 +309,8 @@ button span {
 
 @media screen and (max-width:1100px) {
     .background {
-        width: 700px;
-        height: 700px;
+        width: 0px;
+        height: 0px;
         top: -300px;
         left: -300px;
     }
@@ -330,8 +330,8 @@ button span {
 
 @media screen and (max-width:600px) {
     .background {
-        width: 550px;
-        height: 550px;
+        width: 0;
+        height: 0;
         top: -250px;
         left: -250px;
     }
