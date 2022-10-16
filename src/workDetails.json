@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Challenge full stack - JavaScript ",
+        "description":"Budget management application with token authentication developed with Express and MySql in the backend and vue for the frontend.",
+        "img":"../assets/projectIMages/challenge.jpg",
+        "github":"https://github.com/Behelit0906/personal-budget",
+        "viewLink":""
+    },
+    {
+        "name":"PHP expenses app ",
+        "description":"Web application to keep track of personal expenses which is developed under the model-view-controller pattern and has authentication by sessions, authorization by roles and integration of graphs.",
+        "img":"../assets/projectIMages/phpExpenses.jpg",
+        "github":"https://github.com/Behelit0906/expense-app",
+        "viewLink":""
+    },
+    {
+        "name":"First responsive page",
+        "description":"Experimenting with responsive development and CSS animations using flex and grid for element positioning and the @keyframe rule for animations.",
+        "img":"../assets/projectIMages/responsive.jpg",
+        "github":"https://github.com/Behelit0906/first-responsive-page",
+        "viewLink":"https://glistening-pavlova-58613d.netlify.app/"
+    },
+    {
+        "name":"MP3 player with JavaScript Vanilla",
+        "description":"Experimenting with JavaScript DOM handling",
+        "img":"../assets/projectIMages/mp3-player.jpg",
+        "github":"https://github.com/Behelit0906/mp3-player",
+        "viewLink":"https://lucky-bonbon-30dfc6.netlify.app//"
+    }
+]
