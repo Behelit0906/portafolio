@@ -3,7 +3,7 @@ import Menu from './HamburgerMenu.vue';
 </script>
 
 <template>
-    <div>
+    <div id="home">
         <div class="top">
             <Menu />
             <img src="../assets/img/programming.svg" alt="logo" class="logo" />
