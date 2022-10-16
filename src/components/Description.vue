@@ -6,6 +6,8 @@
             started back in 2021 when I decided to try editing a Conky theme for my Linux desktop- it resulted in
             learning more about CSS and getting the hang of it, at least until you try to center a div.
         </p>
+        <a class="cv-link" href="https://drive.google.com/file/d/14NJeuXqHdFmKO90a1YeL5wOWIvfwcI5H/view?usp=sharing">MY
+            CV</a>
     </div>
 </template>
 
@@ -33,6 +35,23 @@
     font-size: 1.3rem;
     text-align: center;
     line-height: 35px;
+}
+
+.cv-link {
+    position: relative;
+    top: -50px;
+    display: block;
+    width: 20%;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    padding: 10px;
+    font-family: 'europa', sans-serif;
+    color: var(--main-color);
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 @media screen and (max-width:500px) {
