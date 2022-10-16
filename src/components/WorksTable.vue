@@ -2,7 +2,15 @@
 import { onMounted, ref } from 'vue';
 import Work from './Work.vue';
 
-const workList = ref([]);
+type work = {
+    name: string;
+    description: string;
+    img: string
+    github: string
+    viewLink: string
+};
+
+const workList = ref<work[]>([]);
 
 async function readWorksDetails() {
     const data = await fetch('src/workDetails.json').then(res => res.json());
