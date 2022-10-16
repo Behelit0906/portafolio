@@ -1,5 +1,5 @@
 <template>
-    <div class="description-container">
+    <div id="about" class="description-container">
         <h2 class="description-title">About me</h2>
         <p class="description">
             Hi! my name is Luis and I enjoy creating things that live on internet. My interest in web development
