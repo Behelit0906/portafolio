@@ -3,7 +3,7 @@ import SkillCard from './SkillCard.vue';
 </script>
 
 <template>
-    <div class="main-container">
+    <div id="skills" class="main-container">
         <div class="skills-container">
             <SkillCard skill-name="FrontEnd" icon="browser.svg" languagues="HTML, CSS, JavaScript"
                 :tools="['GitHub','Visual Studio Code','Vue']">
