@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import Work from './Work.vue';
+import workDetails from '../assets/workDetails.json';
 
 type work = {
     name: string;
@@ -13,7 +14,7 @@ type work = {
 const workList = ref<work[]>([]);
 
 async function readWorksDetails() {
-    const data = await fetch('src/workDetails.json').then(res => res.json());
+    const data = JSON.parse(JSON.stringify(workDetails));
     console.log(data);
     return data;
 }
