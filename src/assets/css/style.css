@@ -18,3 +18,7 @@ body {
   margin-left: 1%;
   margin-right: 1%;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
