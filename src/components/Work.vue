@@ -6,8 +6,9 @@ const showModal = ref(false);
 
 function showingModal(): void {
     showModal.value = !showModal.value;
-    document.querySelector('body').classList.toggle('overflow-hidden');
-    console.log(props.view);
+    const body = document.querySelector('body');
+    if (body)
+        body.classList.toggle('overflow-hidden');
 }
 
 const props = defineProps<{
