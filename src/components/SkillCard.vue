@@ -6,7 +6,7 @@ const props = defineProps<{
     tools?: string[]
 }>()
 
-const iconPath = `src/assets/icons/${props.icon}`;
+const iconPath = new URL(`../assets/img/${props.icon}`, import.meta.url).href;
 </script>
 
 <template>
