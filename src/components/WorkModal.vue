@@ -56,11 +56,10 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 .modal-container {
     position: relative;
     z-index: 30;
-    top: -200px;
     width: 70%;
     overflow: hidden;
     max-width: 765px;
-    padding: 50px;
+    padding: 20px 15px;
     background-color: #fff;
     border-radius: 5px;
     opacity: 0;
@@ -71,6 +70,7 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
 .close-button {
     position: absolute;
+    width: 50px;
     padding: 7px;
     right: 0px;
     top: 0px;
@@ -161,15 +161,18 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
 @media screen and (max-height:500px) {
     .modal-container {
-        width: 80%;
-        height: 85%;
+        box-sizing: border-box;
+        width: 90%;
+        height: 90%;
+        overflow-y: scroll;
         max-height: 275px;
         text-align: left;
     }
 
     .flex-container {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: center;
     }
 }
 
