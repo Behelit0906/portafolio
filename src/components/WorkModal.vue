@@ -14,9 +14,7 @@ const emit = defineEmits<{
     (e: 'close'): void
 }>()
 
-const imagePath = `src/assets/img/projectImages/${props.image}`;
-
-
+const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.meta.url).href;
 </script>
 
 <template>
