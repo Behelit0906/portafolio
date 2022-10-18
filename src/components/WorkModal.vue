@@ -18,21 +18,19 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 </script>
 
 <template>
-    <div class="modal-background">
-        <div class="modal-container">
-            <div @click="emit('close')" class="close-button">&#10006;</div>
-            <div class="flex-container">
-                <div class="modal-image-container">
-                    <img :src="imagePath" alt="work image" class="modal-image">
-                </div>
-                <div class="modal-description-container">
-                    <p class="modal-title">{{props.title}}</p>
-                    <p class="project-type">WEB DESIGN/DEVELOPMENT</p>
-                    <p>{{props.description}}</p>
-                    <div class="modal-button-container">
-                        <Button name="GitHub" :link="props.github" />
-                        <Button v-if="props.view" name="View" :link="props.view" />
-                    </div>
+    <div class="modal-container">
+        <div @click="emit('close')" class="close-button">&#10006;</div>
+        <div class="flex-container">
+            <div class="modal-image-container">
+                <img :src="imagePath" alt="work image" class="modal-image">
+            </div>
+            <div class="modal-description-container">
+                <p class="modal-title">{{props.title}}</p>
+                <p class="project-type">WEB DESIGN/DEVELOPMENT</p>
+                <p>{{props.description}}</p>
+                <div class="modal-button-container">
+                    <Button name="GitHub" :link="props.github" />
+                    <Button v-if="props.view" name="View" :link="props.view" />
                 </div>
             </div>
         </div>
@@ -40,19 +38,6 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 </template>
 
 <style scoped>
-.modal-background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    z-index: 20;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'europa', sans-serif;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
 .modal-container {
     position: relative;
     z-index: 30;
@@ -94,22 +79,30 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 }
 
 .modal-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
-    padding-left: 25px;
-    padding-right: 20px;
     color: var(--font-body-color);
 }
 
 .flex-container {
     display: flex;
+    padding: 2%;
     flex-direction: row;
-    gap: 0px;
+    gap: 20px;
+    text-align: center;
 }
 
 .modal-title {
+    margin: 0;
     font-size: 24px;
     color: var(--title-color);
     font-weight: 700;
+}
+
+.project-type {
+    margin-bottom: 15px;
 }
 
 .modal-button-container {
@@ -118,61 +111,22 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
     gap: 10px;
 }
 
-@media screen and (max-width:850px) {
-    .modal-image {
-        height: 100%;
-    }
-}
 
-@media screen and (max-width:750px) {
-
-    .modal-container {
-        box-sizing: border-box;
-        width: 85%;
-        overflow-y: scroll;
-        max-height: 550px;
-        padding: 50px 10px;
-        text-align: center;
-    }
-
-    .modal-image-container {
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-    }
-
-    .modal-image {
-        width: 65%;
-    }
+@media screen and (max-width: 700px) {
 
     .flex-container {
         flex-direction: column;
         align-items: center;
     }
 
+    .modal-image-container {
+        padding-top: 25px;
+        width: 70%;
+    }
+
     .modal-description-container {
-        font-size: 14px;
-    }
-
-    .modal-title {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-height:500px) {
-    .modal-container {
-        box-sizing: border-box;
-        width: 90%;
-        height: 90%;
-        overflow-y: scroll;
-        max-height: 275px;
-        text-align: left;
-    }
-
-    .flex-container {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
+        padding-bottom: 3%;
+        width: 70%;
     }
 }
 
