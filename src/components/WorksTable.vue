@@ -15,7 +15,6 @@ const workList = ref<work[]>([]);
 
 async function readWorksDetails() {
     const data = JSON.parse(JSON.stringify(workDetails));
-    console.log(data);
     return data;
 }
 
