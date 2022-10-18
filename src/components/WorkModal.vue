@@ -132,6 +132,7 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
     .modal-image-container {
         width: 40%;
+        min-width: 220px;
     }
 
 }
@@ -154,7 +155,7 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 @keyframes fade-animation {
     to {
         opacity: 1;
-        top: 0;
+        top: -5%;
     }
 }
 </style>
