@@ -42,6 +42,7 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
     position: relative;
     z-index: 30;
     width: 70%;
+    top: -300px;
     overflow: hidden;
     max-width: 765px;
     padding: 20px 15px;
