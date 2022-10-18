@@ -114,6 +114,12 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
 @media screen and (max-width: 700px) {
 
+    .modal-container {
+        max-width: 85vw;
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
+
     .flex-container {
         flex-direction: column;
         align-items: center;
@@ -121,12 +127,12 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
     .modal-image-container {
         padding-top: 25px;
-        width: 70%;
+        width: 80%;
     }
 
     .modal-description-container {
         padding-bottom: 3%;
-        width: 70%;
+        width: 80%;
     }
 }
 
