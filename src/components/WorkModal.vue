@@ -39,13 +39,13 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
 <style scoped>
 .modal-container {
+    box-sizing: border-box;
     position: relative;
     z-index: 30;
-    width: 70%;
+    width: 80%;
     top: -300px;
-    overflow: hidden;
-    max-width: 765px;
-    padding: 20px 15px;
+    overflow-x: hidden;
+    max-height: 76vh;
     background-color: #fff;
     border-radius: 5px;
     opacity: 0;
@@ -56,7 +56,8 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 
 .close-button {
     position: absolute;
-    width: 50px;
+    width: 6%;
+    max-width: 50px;
     padding: 7px;
     right: 0px;
     top: 0px;
@@ -88,8 +89,9 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 }
 
 .flex-container {
+    box-sizing: border-box;
     display: flex;
-    padding: 2%;
+    padding: 6.5%;
     flex-direction: row;
     gap: 20px;
     text-align: center;
@@ -113,26 +115,38 @@ const imagePath = new URL(`../assets/img/projectImages/${props.image}`, import.m
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
-    .modal-container {
-        max-width: 85vw;
-        max-height: 80vh;
-        overflow-y: scroll;
+    .flex-container {
+        justify-content: center;
     }
 
+    .modal-description-container {
+        width: 40%;
+        font-size: 15px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .modal-image-container {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
     .flex-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .modal-image-container {
-        padding-top: 25px;
+    .modal-description-container {
         width: 80%;
     }
 
-    .modal-description-container {
-        padding-bottom: 3%;
+    .modal-image-container {
         width: 80%;
     }
 }
