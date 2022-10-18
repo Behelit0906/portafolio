@@ -12,7 +12,7 @@ const props = defineProps<{
 <style scoped>
 .button-link {
     display: block;
-    width: 40%;
+    width: 35%;
     padding: 10px;
     text-align: center;
     color: #fff;
