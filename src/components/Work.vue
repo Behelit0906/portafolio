@@ -29,7 +29,7 @@ const props = defineProps<{
         <p class="work-name">{{props.name}}</p>
         <p>Web design/development</p>
     </div>
-    <div v-if="showModal" class="modal-container">
+    <div v-if="showModal" class="background-modal-container">
         <WorkModal @close="showingModal" :title="props.name" :description="props.description" :image="props.image"
             :github="props.github" :view="props.view" />
     </div>
@@ -68,12 +68,16 @@ const props = defineProps<{
     transform: rotate(10deg) scale(110%);
 }
 
-.modal-container {
+.background-modal-container {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
-    z-index: 20;
+    z-index: 30;
     width: 100vw;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .overflow-hidden {
