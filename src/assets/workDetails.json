@@ -1,5 +1,12 @@
 [
     {
+        "name":"Weather App",
+        "description":"Application to track the weather in your city and more.",
+        "img":"weather.jpg",
+        "github":"https://github.com/Behelit0906/weather-app",
+        "viewLink":"https://warm-daffodil-e76547.netlify.app/"
+    },
+    {
         "name":"Challenge full stack - JavaScript ",
         "description":"Budget management application with token authentication developed with Express and MySql in the backend and vue for the frontend.",
         "img":"challenge.jpg",
