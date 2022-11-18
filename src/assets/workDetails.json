@@ -1,5 +1,12 @@
 [
     {
+        "name":"E-Wallet - Alkemy Challenge",
+        "description":"Team-developed E-Wallet as the challenge proposed by the Alkemy bootcamp applying the Scrum methodology.",
+        "img":"alkemyChallenge.jpg",
+        "github":"https://github.com/Alex0711/Skill-Up-JS-Backend",
+        "viewLink":""
+    },
+    {
         "name":"Weather App",
         "description":"Application to track the weather in your city and more.",
         "img":"weather.jpg",
