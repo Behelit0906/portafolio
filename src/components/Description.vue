@@ -177,14 +177,12 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
 .facebook {
     width: 100%;
     height: 100%;
-    display: block;
     fill: #fff;
 }
 
 .linkedin {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    right: -2px;
     width: 80%;
     height: 80%;
     fill: #fff;
@@ -197,7 +195,6 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
 .github {
     position: relative;
     left: -1px;
-    display: block;
     width: 110%;
     height: 110%;
 }
