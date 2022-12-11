@@ -158,8 +158,8 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
 
 .socialnetworks {
     position: relative;
-    top: -90px;
     display: flex;
+    top: -80px;
     justify-content: center;
     gap: 2%;
 }
