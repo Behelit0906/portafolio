@@ -11,7 +11,7 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
             started back in 2021 when I decided to try editing a Conky theme for my Linux desktop, it resulted in
             learning more about CSS and getting the hang of it, at least until you try to center a div.
         </p>
-        <div class="socialnetworks">
+        <div class="socialnetworks-container">
             <a class="socialIcon-container" href="https://web.facebook.com/luis.salcedo.37051">
                 <svg class="facebook icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
@@ -156,7 +156,7 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
     border-radius: 5px;
 }
 
-.socialnetworks {
+.socialnetworks-container {
     position: relative;
     display: flex;
     top: -80px;
