@@ -108,6 +108,10 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
             </a>
 
         </div>
+        <div class="otherdata">
+            <p>Mail: luis.salcedo0906@gmail.com</p>
+            <p>Phone: +57 3045409695</p>
+        </div>
         <a class="cv-link"
             href="https://drive.google.com/file/d/14NJeuXqHdFmKO90a1YeL5wOWIvfwcI5H/view?usp=sharing">VIEW CV</a>
     </div>
@@ -197,6 +201,14 @@ const linkedin = new URL(`../assets/icons/linkedin.svg`, import.meta.url).href;
     left: -1px;
     width: 110%;
     height: 110%;
+}
+
+.otherdata {
+    position: relative;
+    top: -60px;
+    text-align: center;
+    font-family: 'europa', sans-serif;
+    font-size: 1rem;
 }
 
 .socialIcon-container:hover {
