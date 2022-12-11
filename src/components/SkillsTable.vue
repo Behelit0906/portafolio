@@ -6,18 +6,18 @@ import SkillCard from './SkillCard.vue';
     <div id="skills" class="main-container">
         <div class="skills-container">
             <SkillCard skill-name="FrontEnd" icon="browser.svg" languagues="HTML, CSS, JavaScript"
-                :tools="['GitHub','Visual Studio Code','Vue']">
+                :tools="['GitHub', 'Visual Studio Code', 'Vue', 'Vite', 'Tailwind']">
                 I value simple content structure, clean design and thoughtful interactions.
             </SkillCard>
 
             <SkillCard skill-name="Other Skills" icon="social.svg"
                 languagues="Communication, Responsibility, Flexibility"
-                :tools="['Team work','Problem-solving','Attention to detail','Creativity']">
+                :tools="['Team work', 'Problem-solving', 'Attention to detail', 'Creativity']">
                 Because before developers we are people.
             </SkillCard>
 
             <SkillCard skill-name="BackEnd" icon="database.svg" languagues="JavaScript, PHP, SQL"
-                :tools="['Express', 'Laravel', 'Node', 'MySQL','Apache', 'Postman']">
+                :tools="['Express', 'Laravel', 'Node', 'MySQL', 'Apache', 'Postman']">
                 I like to code things from scratch, and enjoy bringing ideas to life in the browser.
             </SkillCard>
         </div>
