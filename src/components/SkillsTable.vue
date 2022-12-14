@@ -3,10 +3,10 @@ import SkillCard from './SkillCard.vue';
 </script>
 
 <template>
-    <div id="skills" class="main-container">
-        <div class="skills-container">
-            <SkillCard skill-name="FrontEnd" icon="browser.svg" languagues="HTML, CSS, JavaScript"
-                :tools="['GitHub', 'Visual Studio Code', 'Vue', 'Vite', 'Tailwind']">
+    <section id="skills" class="rounded-xl w-[90%] mx-auto bg-white border-slate-200 border overflow-hidden">
+        <div class="flex flex-col sm:flex-row justify-center">
+            <SkillCard skill-name="FrontEnd" icon="browser.svg" languagues="HTML, CSS, JavaScript, TypeScript"
+                :tools="['GitHub', 'Visual Studio Code', 'Vue', 'Pinia', 'Vite', 'Tailwind']">
                 I value simple content structure, clean design and thoughtful interactions.
             </SkillCard>
 
@@ -16,35 +16,10 @@ import SkillCard from './SkillCard.vue';
                 Because before developers we are people.
             </SkillCard>
 
-            <SkillCard skill-name="BackEnd" icon="database.svg" languagues="JavaScript, PHP, SQL"
-                :tools="['Express', 'Laravel', 'Node', 'MySQL', 'Apache', 'Postman']">
+            <SkillCard skill-name="BackEnd" icon="database.svg" languagues="JavaScript, TypeScript, PHP, SQL"
+                :tools="['Express', 'Laravel', 'Node', 'MySQL', 'Apache', 'Postman', 'Docker']">
                 I like to code things from scratch, and enjoy bringing ideas to life in the browser.
             </SkillCard>
         </div>
-    </div>
+    </section>
 </template>
-
-<style scoped>
-.main-container {
-    position: relative;
-    top: -180px;
-    overflow: hidden;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
-    background-color: #fff;
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
-}
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-}
-
-@media screen and (max-width:760px) {
-    .skills-container {
-        flex-direction: column;
-    }
-}
-</style>

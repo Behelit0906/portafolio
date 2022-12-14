@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --main-color: #6e07f3;
   --title-color: #141c3a;
@@ -12,11 +16,6 @@
 @font-face {
   font-family: "europa";
   src: url("../fonts/EuropaRegular.ttf");
-}
-
-body {
-  margin-left: 1%;
-  margin-right: 1%;
 }
 
 .overflow-hidden {

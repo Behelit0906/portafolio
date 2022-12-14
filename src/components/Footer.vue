@@ -1,10 +1,10 @@
 <template>
-    <div class="footer-container">
-        <div class="footer-logo-container">
+    <footer class="rounded mb-3 flex flex-col gap-y-4 items-center bg-mainColor pt-20 pb-11 font-europa">
+        <div class="w-[130px] sm:w-[20%]">
             <img src="../assets/img/programming.svg" alt="programming" class="footer-logo">
         </div>
-        <div class="footer-phrase">Living, learning, & leveling up <br /> one day at a time.</div>
-    </div>
+        <div class="text-center text-white text-xl">Living, learning, & leveling up <br /> one day at a time.</div>
+    </footer>
 </template>
 
 <style scoped>

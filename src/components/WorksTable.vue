@@ -23,46 +23,14 @@ onMounted(async () => workList.value = await readWorksDetails());
 </script>
 
 <template>
-    <div id="works" class="works-table-main-container">
-        <h2 class="works-table-title">My works</h2>
-        <div class="works-container">
+    <section id="works" class=" bg-mainColor pt-28 pb-48 md:pb-72 px-11 rounded">
+        <h2 class="font-europanuova text-white text-center text-3xl mb-11">Personal projects</h2>
+        <div class="flex flex-col sm:flex-row gap-y-6 flex-wrap">
             <template v-for="work in workList">
                 <Work :name="work.name" :description="work.description" :image="work.img" :github="work.github"
                     :view="work.viewLink" />
             </template>
         </div>
 
-    </div>
+    </section>
 </template>
-
-<style scoped>
-.works-table-main-container {
-    position: relative;
-    top: -60px;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.works-table-title {
-    margin-bottom: 60px;
-    font-family: 'europanuova', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    text-align: center;
-    color: var(--title-color);
-}
-
-.works-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-
-@media screen and (max-width:760px) {
-    .works-table-main-container {
-        top: -100px;
-    }
-}
-</style>

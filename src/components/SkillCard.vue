@@ -10,26 +10,27 @@ const iconPath = new URL(`../assets/img/${props.icon}`, import.meta.url).href;
 </script>
 
 <template>
-    <div class="card-container">
-        <div class="card-header">
-            <div class="icon-background">
-                <img :src="iconPath" alt="card icon" class="icon">
+    <div class="sm:w-1/3 w-full sm:py-[5%] py-[13%] font-europa border-[0.5px] border-slate-200">
+        <div class="w-1/2 mx-auto mb-6 text-center">
+            <div class="flex justify-center w-[85px] h-[85px] mx-auto mb-5 bg-[#5BE9B9] rounded-full">
+                <img :src="iconPath" alt="card icon" class="w-1/2">
             </div>
-            <p class="skill-name">{{props.skillName}}</p>
+            <p class="mt-[10px] text-2xl font-medium font-europanuova text-titleColor">{{ props.skillName }}
+            </p>
         </div>
-        <div class="card-body">
-            <p class="description">
+        <div class="w-4/5 text-bodyColor mx-auto text-center">
+            <p class="mb-[50px]">
                 <slot></slot>
             </p>
             <div>
-                <p class="languagues">Languagues I speak</p>
-                <p>{{props.languagues}}</p>
+                <p class="text-lg text-mainColor">Languagues I speak</p>
+                <p>{{ props.languagues }}</p>
             </div>
             <div>
-                <p v-if="props.tools" class="dev-tools">Dev tools:</p>
-                <ul class="tools-list">
+                <p v-if="props.tools" class="pt-[35px] text-lg text-mainColor mb-3">Dev tools</p>
+                <ul class="space-y-2">
                     <li v-for="tool in props.tools">
-                        {{tool}}
+                        {{ tool }}
                     </li>
                 </ul>
             </div>
@@ -38,95 +39,3 @@ const iconPath = new URL(`../assets/img/${props.icon}`, import.meta.url).href;
     </div>
 
 </template>
-
-<style scoped>
-.card-container {
-    width: 33.3%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    font-family: 'europa', sans-serif;
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.icon-background {
-    display: flex;
-    justify-content: center;
-    width: 85px;
-    height: 85px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    background-color: #5BE9B9;
-    border-radius: 50%;
-}
-
-.icon {
-    width: 50%;
-}
-
-.skill-name {
-    margin: 10px 0 0 0;
-    font-size: 23px;
-    font-weight: 700;
-    color: var(--title-color);
-    font-style: 'europanuova', sans-serif;
-}
-
-.card-body {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: var(--font-body-color);
-}
-
-
-.description {
-    margin-bottom: 50px;
-}
-
-.languagues {
-    font-size: 18px;
-    color: #6E0FF6;
-}
-
-.dev-tools {
-    padding-top: 35px;
-    font-size: 18px;
-    color: #6E0FF6;
-}
-
-.tools-list {
-    list-style: none;
-    padding: 0;
-}
-
-.tools-list li {
-    margin-bottom: 7px;
-}
-
-@media screen and (max-width:760px) {
-    .card-container {
-        width: 100%;
-        padding-top: 13%;
-        padding-bottom: 13%;
-    }
-
-    .icon-background {
-        width: 80px;
-        height: 80px;
-    }
-
-    .skill-name {
-        font-size: 22px;
-    }
-}
-</style>

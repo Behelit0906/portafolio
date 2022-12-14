@@ -1,13 +1,31 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, Ref } from 'vue';
 
 const openClass = ref('');
+const buttonBackground = ref(false);
+const background: Ref<any> = ref(null);
 
-function open(): void {
-    if (!openClass.value || openClass.value === 'close')
-        openClass.value = 'open';
-    else if (openClass.value === 'open')
+onMounted(() => {
+    background.value.focus();
+})
+
+const open = (): void => {
+    if (openClass.value === 'open') {
         openClass.value = 'close';
+        buttonBackground.value = false;
+    }
+
+    else if (!openClass.value || openClass.value === 'close') {
+        openClass.value = 'open'
+        buttonBackground.value = true;
+    }
+}
+
+const close = (e: MouseEvent) => {
+    if (e.target === background.value) {
+        openClass.value = 'close';
+        buttonBackground.value = false;
+    }
 }
 
 </script>
@@ -15,20 +33,24 @@ function open(): void {
 
 <template>
     <div class="container">
-        <button :class="openClass" @click="open">
+        <button ref="button" :class="openClass" @click="open">
             <span class="top-line"></span>
             <span class="middle-line"></span>
             <span class="bottom-line"></span>
         </button>
         <div :class="openClass">
             <div class="background">
-                <ul class="menu-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#about">About me</a></li>
+                <ul
+                    class="absolute font-europa top-[55%] right-[23%] text-xl text-white space-y-1 sm:text-3xl sm:top-[51%] sm:space-y-2">
+                    <li><a @click="open" class="transition hover:underline" href="#home">Home</a></li>
+                    <li><a @click="open" class="transition hover:underline" href="#about">About me</a></li>
+                    <li><a @click="open" class="transition hover:underline" href="#skills">Skills</a></li>
+                    <li><a @click="open" class="transition hover:underline" href="#works">Works</a></li>
+                    <li><a @click="open" class="transition hover:underline" href="#contact">Contact me</a></li>
                 </ul>
             </div>
+        </div>
+        <div v-show="buttonBackground" ref="background" @click="close" class="w-screen top-0 left-0 h-screen fixed">
         </div>
     </div>
 </template>
@@ -37,11 +59,10 @@ function open(): void {
 <style scoped>
 button {
     position: relative;
-    z-index: 10;
+    z-index: 20;
     width: 60px;
     height: 60px;
     padding: 0;
-    margin-top: 10px;
     background-color: var(--main-color);
     border: none;
     border-radius: 100%;
@@ -69,6 +90,7 @@ button span {
     left: -350px;
     width: 0px;
     height: 0px;
+    z-index: 10;
     border-radius: 50%;
     background-color: var(--main-color);
     animation-fill-mode: forwards;
@@ -82,7 +104,6 @@ button span {
     width: 160px;
     padding: 0;
     list-style: none;
-    font-size: 2rem;
     text-align: center;
 }
 
@@ -328,7 +349,7 @@ button span {
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:640px) {
     .background {
         width: 0;
         height: 0;

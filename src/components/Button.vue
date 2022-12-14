@@ -6,24 +6,8 @@ const props = defineProps<{
 </script>
 
 <template>
-    <a :href="props.link" class="button-link">{{props.name}}</a>
+    <a :href="props.link" target="_blank"
+        class="text-xs sm:text-base transition ease-in-out hover:bg-white hover:text-mainColor w-[35%] p-[10px] text-white text-center border border-mainColor bg-mainColor rounded block">{{
+        props.name
+        }}</a>
 </template>
-
-<style scoped>
-.button-link {
-    display: block;
-    width: 35%;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    background-color: var(--main-color);
-    border: 1px solid #fff;
-    border-radius: 5px;
-}
-
-.button-link:hover {
-    color: var(--main-color);
-    background-color: #fff;
-    border: 1px solid var(--main-color);
-}
-</style>
